@@ -1,0 +1,19 @@
+{
+  "name": "a04-grace4sun",
+  "version": "1.0.0",
+  "description": "This assignment will help you stand up a web API using Express and the module that you produced for a03.",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"node server.js --port=5555\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a04-grace4sun.git"
+  },
+  "author": "Grace Sun",
+  "license": " GNU GENERAL PUBLIC LICENSE",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a04-grace4sun/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a04-grace4sun#readme"
+}
