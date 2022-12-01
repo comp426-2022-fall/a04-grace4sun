@@ -29,7 +29,13 @@ app.get('/app/roll/', (req, res) => {
 //Example URLEncoded string for data body: ?sides=20&dice=4&rolls=3. Example JSON data body: {"sides":20,"dice":4,"rolls":3}. 
 //The format of the resulting JSON should look like: {"sides":20,"dice":4,"rolls":3,"results":[19,3,60]}.
 
+app.get('/app/roll/', (req, res) => {
+    res.send(roll(req.query.sides, req.query.dice, req.query.rolls)).end();
+})
 
+app.post('/app/roll/', (req, res) => {
+    res.send(roll(req.body.sides, req.body.dice, req.body.rolls)).end();
+})
 
 //Default API endpoint that returns 404 NOT FOUND for any endpoints that are not defined.
 app.get('*', (req, res) => {
