@@ -5,7 +5,7 @@ import minimist from 'minimist';
 import express from 'express';
 
 //command line arguments
-const args = minimist(process.arg.slice(2));
+const args = minimist(process.argv.slice(2));
 const port = args.port || 5000;
 
 const app = express();
