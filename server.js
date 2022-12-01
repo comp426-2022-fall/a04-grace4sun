@@ -43,6 +43,11 @@ app.get('/app/roll/:sides/:dice/', (req, res) => {
     res.send(roll(parseInt(req.params.sides), parseInt(req.params.dice), 1)).end();
 })
 
+//Endpoint /app/roll/:sides/:dice/:rolls/ that returns JSON for the specified number of rolls with whatever number of sides and dice specified in the parameters.
+
+app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
+    res.send(roll(parseInt(req.params.sides), parseInt(req.params.dice), parseInt(req.params.rolls))).end();
+})
 
 //Default API endpoint that returns 404 NOT FOUND for any endpoints that are not defined.
 app.get('*', (req, res) => {
