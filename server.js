@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import { roll } from './lib/roll.js';
 import minimist from 'minimist';
 import express from 'express';
@@ -34,7 +33,6 @@ app.post('/app/roll/', (req, res) => {
 })
 
 //Endpoint /app/roll/:sides/ that returns JSON for a default number of rolls and dice with whatever number of sides is specified in the parameter. 
-
 app.get('/app/roll/:sides/', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).send(roll(parseInt(req.params.sides), 2, 1)).end();
